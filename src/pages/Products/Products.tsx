@@ -59,7 +59,6 @@ const Products = () => {
     debounce((event: any) => {
       if (event.target.value.length > 2) {
         const results: ICodesData[] = [];
-        console.log('debou');
         data.map((item: ICodesData) => {
           Object.values(item).map((value: string) => {
             if (value && value.includes(event.target.value)) {
