@@ -1,4 +1,4 @@
-import "./App.css";
+import './assets/styles/index.scss';
 
 function App() {
   return <>B2B</>;
