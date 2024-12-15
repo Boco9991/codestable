@@ -1,0 +1,20 @@
+.InputWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.Input {
+  padding: 10px 10px 10px 30px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.Icon {
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+  color: #aaa;
+}
