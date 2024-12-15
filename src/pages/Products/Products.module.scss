@@ -1,0 +1,36 @@
+.Loader {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Container {
+  display: flex;
+  gap: 1rem;
+}
+
+.TableContainer {
+  width: 80%;
+}
+
+.Search {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20%;
+
+  .Box {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+}

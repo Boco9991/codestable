@@ -2,7 +2,8 @@ import React from 'react';
 import s from './Button.module.scss';
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
+  onDoubleClick?: () => void;
   label: string;
   className?: string;
   variant?: 'add' | 'remove';
@@ -10,6 +11,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
+  onDoubleClick,
   label,
   className,
   variant,
@@ -17,7 +19,11 @@ const Button: React.FC<ButtonProps> = ({
   const buttonClass = `${s.Btn} ${variant === 'add' ? s.BtnAdd : variant === 'remove' ? s.BtnRemove : ''} ${className || ''}`;
 
   return (
-    <button className={buttonClass} onClick={onClick}>
+    <button
+      className={buttonClass}
+      onClick={onClick}
+      onDoubleClick={onDoubleClick}
+    >
       {label}
     </button>
   );

@@ -1,7 +1,13 @@
+import Products from './pages/Products/Products';
+import 'devextreme/dist/css/dx.light.css';
 import './assets/styles/index.scss';
 
-function App() {
-  return <>B2B</>;
-}
+const App = () => {
+  return (
+    <>
+      <Products />
+    </>
+  );
+};
 
 export default App;
