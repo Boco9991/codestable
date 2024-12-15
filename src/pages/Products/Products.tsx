@@ -24,27 +24,20 @@ const Products = () => {
 
   useEffect(() => {
     setIsLoading(true);
-
-    // Fetch data using the API service
-    fetchData()
-      .then((responseData) => {
-        setData(responseData);
-        setTableData(responseData);
+    Promise.all([fetchData(), fetchColumns()])
+      .then(([data, colums]) => {
+        setData(data);
+        setTableData(data);
+        setColumns(
+          colums.map((item: string) => {
+            return { key: item, isVisible: visibleColumns.includes(item) };
+          })
+        );
+        setIsLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.error('Error fetching data:', error);
       });
-
-    // Fetch columns using the API service
-    fetchColumns(visibleColumns)
-      .then((columnsData) => {
-        setColumns(columnsData);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-    setIsLoading(false);
   }, []);
 
   const handleDoubleClickColumn = (key: string, isVisible: boolean) => {
