@@ -1,11 +1,6 @@
 import React from 'react';
+import { InputProps } from '../../../types/interfaces/InputProps';
 import s from './Input.module.scss';
-
-interface InputProps {
-  placeholder: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  icon?: React.ReactNode;
-}
 
 const Input: React.FC<InputProps> = ({ placeholder, onChange, icon }) => {
   return (

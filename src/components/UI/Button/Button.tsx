@@ -1,13 +1,6 @@
 import React from 'react';
 import s from './Button.module.scss';
-
-interface ButtonProps {
-  onClick?: () => void;
-  onDoubleClick?: () => void;
-  label: string;
-  className?: string;
-  variant?: 'add' | 'remove';
-}
+import { ButtonProps } from '../../../types/interfaces/ButtonProps';
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
