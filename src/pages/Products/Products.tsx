@@ -3,7 +3,7 @@ import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 import DataGrid, { Column } from 'devextreme-react/data-grid';
 import { LoadIndicator } from 'devextreme-react/load-indicator';
-import { IColumn, ICodesData } from '../../types/interfaces';
+import { IColumn, ICodesData } from '../../types/interfaces/TableProps';
 import { formatColumnName, debounce } from '../../utils/helper';
 import { fetchColumns, fetchData } from '../../services/tableApiService';
 import { FaSearch } from 'react-icons/fa';
@@ -89,7 +89,7 @@ const Products = () => {
               <Input
                 placeholder="Pretrazi"
                 onChange={(event) => handleSearch(event)}
-                icon={<FaSearch />} // Pass the search icon here
+                icon={<FaSearch />}
               />
             </div>
             <DataGrid
